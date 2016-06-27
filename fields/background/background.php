@@ -95,6 +95,7 @@ class CSFramework_Option_background extends CSFramework_Options {
         'pseudo'          => true,
         'type'            => 'select',
         'name'            => $this->element_name( '[size]' ),
+        'wrap_class'      => 'cs-psuedo-field-last',
         'options'         => array(
           ''              => 'size',
           'cover'         => 'cover',
