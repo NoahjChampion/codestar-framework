@@ -25,7 +25,8 @@ class CSFramework_Option_select extends CSFramework_Options {
       $extra_name = ( isset( $this->field['attributes']['multiple'] ) ) ? '[]' : '';
       $chosen_rtl = ( is_rtl() && strpos( $class, 'chosen' ) ) ? 'chosen-rtl' : '';
 
-      echo '<select name="'. $this->element_name( $extra_name ) .'"'. $this->element_class( $chosen_rtl ) . $this->element_attributes() .'>';
+      echo '<span class="cs-dropdown cs-dropdown--white">';
+      echo '<select class="cs-dropdown__select cs-dropdown__select--white" name="'. $this->element_name( $extra_name ) .'"'. $this->element_class( $chosen_rtl ) . $this->element_attributes() .'>';
 
       echo ( isset( $this->field['default_option'] ) ) ? '<option value="">'.$this->field['default_option'].'</option>' : '';
 
@@ -36,6 +37,7 @@ class CSFramework_Option_select extends CSFramework_Options {
       }
 
       echo '</select>';
+      echo '</span>';
 
     }
 
