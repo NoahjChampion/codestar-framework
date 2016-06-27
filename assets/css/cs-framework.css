@@ -1082,6 +1082,11 @@ CS Select Style
 .cs-field-upload input {
   width: 420px;
   max-width: 100%;
+  margin-right: 10px;
+}
+.cs-field-background .cs-field-upload input {
+    width: 428px;
+    margin-right: 10px;
 }
 
 .cs-field-background .cs-field-upload input {
