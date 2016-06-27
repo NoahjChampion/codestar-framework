@@ -66,7 +66,8 @@ class CSFramework_Option_typography extends CSFramework_Options {
       $is_google = ( array_key_exists( $family_value, $googlefonts ) ) ? true : false;
 
       echo '<label class="cs-typography-family">';
-      echo '<select name="'. $this->element_name( '[family]' ) .'" class="'. $is_chosen . $chosen_rtl .'cs-typo-family" data-atts="family"'. $this->element_attributes() .'>';
+      echo '<span class="cs-dropdown cs-dropdown--white">';
+      echo '<select class="cs-dropdown__select cs-dropdown__select--white" name="'. $this->element_name( '[family]' ) .'" class="'. $is_chosen . $chosen_rtl .'cs-typo-family" data-atts="family"'. $this->element_attributes() .'>';
 
       do_action( 'cs_typography_family', $family_value, $this );
 
@@ -83,6 +84,7 @@ class CSFramework_Option_typography extends CSFramework_Options {
       echo '</optgroup>';
 
       echo '</select>';
+      echo '</span>';
       echo '</label>';
 
       if( ! empty( $is_variant ) ) {
@@ -91,11 +93,13 @@ class CSFramework_Option_typography extends CSFramework_Options {
         $variants = ( $value['font'] === 'google' || $value['font'] === 'websafe' ) ? $variants : array( 'regular' );
 
         echo '<label class="cs-typography-variant">';
-        echo '<select name="'. $this->element_name( '[variant]' ) .'" class="'. $is_chosen . $chosen_rtl .'cs-typo-variant" data-atts="variant">';
+        echo '<span class="cs-dropdown cs-dropdown--white">';
+        echo '<select class="cs-dropdown__select cs-dropdown__select--white" name="'. $this->element_name( '[variant]' ) .'" class="'. $is_chosen . $chosen_rtl .'cs-typo-variant" data-atts="variant">';
         foreach ( $variants as $variant ) {
           echo '<option value="'. $variant .'"'. $this->checked( $variant_value, $variant, 'selected' ) .'>'. $variant .'</option>';
         }
         echo '</select>';
+        echo '</span>';
         echo '</label>';
 
       }
