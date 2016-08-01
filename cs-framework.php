@@ -14,7 +14,7 @@
  * Description: A Lightweight and easy-to-use WordPress Options Framework
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain: cs-framework
+ * Text Domain: custom-theme-translation-api
  *
  * ------------------------------------------------------------------------------------------------
  *
@@ -49,8 +49,8 @@ if( ! function_exists( 'cs_framework_init' ) && ! class_exists( 'CSFramework' ) 
     defined( 'CS_ACTIVE_FRAMEWORK' )  or  define( 'CS_ACTIVE_FRAMEWORK',  true );
     defined( 'CS_ACTIVE_METABOX'   )  or  define( 'CS_ACTIVE_METABOX',    true );
     defined( 'CS_ACTIVE_TAXONOMY'   ) or  define( 'CS_ACTIVE_TAXONOMY',   true );
-    defined( 'CS_ACTIVE_SHORTCODE' )  or  define( 'CS_ACTIVE_SHORTCODE',  true );
-    defined( 'CS_ACTIVE_CUSTOMIZE' )  or  define( 'CS_ACTIVE_CUSTOMIZE',  true );
+    defined( 'CS_ACTIVE_SHORTCODE' )  or  define( 'CS_ACTIVE_SHORTCODE',  false );
+    defined( 'CS_ACTIVE_CUSTOMIZE' )  or  define( 'CS_ACTIVE_CUSTOMIZE',  false );
 
     // helpers
     cs_locate_template( 'functions/deprecated.php'     );
@@ -69,6 +69,10 @@ if( ! function_exists( 'cs_framework_init' ) && ! class_exists( 'CSFramework' ) 
     cs_locate_template( 'classes/taxonomy.class.php'   );
     cs_locate_template( 'classes/shortcode.class.php'  );
     cs_locate_template( 'classes/customize.class.php'  );
+    
+    // libraries
+    cs_locate_template( 'libraries/post_types/cs-post-type.php'  );
+    cs_locate_template( 'libraries/taxonomies/cs-taxonomy.php'  );
 
     // configs
     cs_locate_template( 'config/framework.config.php'  );
@@ -76,6 +80,10 @@ if( ! function_exists( 'cs_framework_init' ) && ! class_exists( 'CSFramework' ) 
     cs_locate_template( 'config/taxonomy.config.php'   );
     cs_locate_template( 'config/shortcode.config.php'  );
     cs_locate_template( 'config/customize.config.php'  );
+    
+    // library configs
+    cs_locate_template( 'config/register.post.type.config.php'  );
+    cs_locate_template( 'config/register.metabox.config.php'  );
 
   }
   add_action( 'init', 'cs_framework_init', 10 );
