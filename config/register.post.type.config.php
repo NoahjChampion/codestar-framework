@@ -11,7 +11,7 @@ cs_post_type('custom-post-type',
     ) // <= No comma after this point or error will trigger
 );
 // Adding a custom taxonomy to a post type
-cs_taxonomy('Categories', 'custom-post-type',
+cs_taxonomy('Categories', 'demo-post-type',
     array(
         'singular' => 'Categories',
         'plural' => 'Category',
