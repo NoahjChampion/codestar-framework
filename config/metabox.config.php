@@ -203,7 +203,7 @@ $options[]    = array(
 // -----------------------------------------
 $options[]    = array(
   'id'        => '_custom_page_options',
-  'title'     => 'Custom Page Options',
+  'title'     => 'Custom Post Type Options',
   'post_type' => 'demo-post-type',
   'context'   => 'normal',
   'priority'  => 'default',
@@ -302,7 +302,7 @@ $options[]    = array(
 // -----------------------------------------
 $options[]    = array(
   'id'        => '_custom_page_side_options',
-  'title'     => 'Custom Page Side Options',
+  'title'     => 'Custom Post Type Side Options',
   'post_type' => 'demo-post-type',
   'context'   => 'side',
   'priority'  => 'default',
