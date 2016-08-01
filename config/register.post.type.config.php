@@ -5,9 +5,9 @@
 // Adding a custom post type
 cs_post_type('custom-post-type',
     array(
-        'singular' => 'Custom Post Type',
-        'plural' => 'Custom Post Type',
-        'slug' => 'custom-post-type',
+        'singular' => 'Demo Post Type',
+        'plural' => 'Demo Post Type',
+        'slug' => 'demo-post-type',
     )
 );
 // Adding a custom taxonomy to a post type
